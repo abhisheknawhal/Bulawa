@@ -17,15 +17,6 @@ const FirstScreen = (props) => {
 
     return (
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', marginTop: 20 }}>
-            <ImageBackground
-                style={{
-                    flex: 1,
-                    width: '100%',
-                    height: '100%',
-                    borderRadius: 60,
-                }}
-                source={AppImages.Invitation}
-            />
             {/* <Text style={{position: 'absolute', fontSize: 40 , fontWeight:"900", marginTop:30}}>BULAWAA</Text>  */}
             <View style={{ flexDirection: 'row', position: 'absolute', }}>
                 <Button

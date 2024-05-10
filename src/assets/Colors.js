@@ -1,0 +1,20 @@
+export default {
+    BLACK: 'black',
+    BLACKGRAY: '#666666',
+    RED: 'rgba(208, 2, 27, 1)',
+    BLUE: '#4D51D4',
+    PURPLE_COLOR: 'rgb(22,3,38)',
+    WHITE: '#fcfffd',
+    GREY: '#E3E3E3',
+    DARK_GREY: '#7E7E7E',
+    EXTRA_DARK_GREY: '#CBCBCB',
+    YALLOW: '#F8BE1B',
+    ORANGE: '#F7571D',
+    MINT: '#0AAB99',
+    TEAL: '#3B82A6',
+    TEAL1: '#449DBF',
+    MEDIUMTURQUOISE: '#17A2B8',
+    APP_BLUE: '#4D51D4',
+    GREEN: 'rgba(22, 168, 95, 1)',
+  };
+  

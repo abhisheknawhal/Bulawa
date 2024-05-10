@@ -1,4 +1,6 @@
 
 import images from "./images";
+import Fonts from "./Fonts";
+import Colors from "./Colors";
 
-export { images as AppImages };
+export { Fonts, Colors, images as AppImages };
