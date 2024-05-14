@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, StyleSheet, Button, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import Main from '../Main';
+import ApiClient from '../../network/ApiManager';
 
 const SignIn = (props) => {
   const navigation = useNavigation();
@@ -19,6 +20,25 @@ const SignIn = (props) => {
       Alert.alert('Registered Successfully !! ');
       props.navigation.navigate('Main');
     }
+  };
+
+  const handleSignUp = async () => {
+    try {
+      const response = await ApiClient.handleLogin({
+        email:email,
+        password: password,
+        full_name: name,
+        confirm_password:password,
+        phone:phone,
+      });
+      let Data = response.status
+      console.warn('abhi',Data);
+      if (Data === 201) {
+         props.navigation.navigate('Main');
+      }
+    } catch (error) {
+      console.error(error);
+    } 
   };
 
   return (
@@ -65,7 +85,7 @@ const SignIn = (props) => {
         title="Signup"
         color="#841584"
         style={{ marginRight: 10 }}
-        onPress={handleSignIn}
+        onPress={handleSignUp}
       />
     </View>
   );
