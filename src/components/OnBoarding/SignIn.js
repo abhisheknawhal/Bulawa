@@ -13,15 +13,6 @@ const SignIn = (props) => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
 
-  const handleSignIn = () => {
-    if (!name || !phone || !email || !password) {
-      Alert.alert('Incomplete Details', 'Please fill in all fields.');
-    } else {
-      Alert.alert('Registered Successfully !! ');
-      props.navigation.navigate('Main');
-    }
-  };
-
   const handleSignUp = async () => {
     try {
       const response = await ApiClient.handleLogin({
