@@ -16,7 +16,7 @@ const FirstScreen = (props) => {
     };
 
     return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', marginTop: 20 }}>
+        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', marginTop: 20, backgroundColor:'#fffcf9' }}>
             {/* <Text style={{position: 'absolute', fontSize: 40 , fontWeight:"900", marginTop:30}}>BULAWAA</Text>  */}
             <View style={{ flexDirection: 'row', position: 'absolute', }}>
                 <Button

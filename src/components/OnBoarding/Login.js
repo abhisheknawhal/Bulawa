@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, StyleSheet, Button, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import Main from '../Main';
+import LinearGradient from 'react-native-linear-gradient';
 
 const Login = (props) => {
     const navigation = useNavigation();
@@ -16,14 +16,15 @@ const Login = (props) => {
         if (!name || !password) {
             Alert.alert('Incomplete Details', 'Please fill in all fields.');
         } else {
-            //Alert.alert('Details', `Name: ${name}\nPhone-Number: ${phone}\nEmail: ${email}\nPassword: ${password}`);
             props.navigation.navigate('Main');
         }
     };
 
     return (
-        <View style={styles.container}>
-            <Text style={styles.title}>Login </Text>
+       
+            <LinearGradient colors={['#4c669f', '#3b5998', '#192f6a']} style={styles.linearGradient}>
+                 <View style={styles.container}>
+            <Text style={styles.title}>Sign In </Text>
             <TextInput
                 style={styles.input}
                 placeholder="Name"
@@ -44,7 +45,9 @@ const Login = (props) => {
                 style={{ marginRight: 10 }}
                 onPress={handleLoginIn}
             />
-        </View>
+         </View>
+            </LinearGradient>
+
     );
 };
 
@@ -54,6 +57,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         paddingHorizontal: 20,
+        backgroundColor:'#fffcf9',
     },
     title: {
         fontSize: 24,
@@ -63,7 +67,8 @@ const styles = StyleSheet.create({
         width: '100%',
         height: 40,
         borderColor: '#ccc',
-        borderWidth: 1,
+        // borderWidth: 1,
+        borderBottomWidth:1,
         borderRadius: 5,
         paddingHorizontal: 10,
         marginBottom: 10,
@@ -80,6 +85,13 @@ const styles = StyleSheet.create({
         color: '#fff',
         fontSize: 16,
     },
+    linearGradient: {
+        flex: 1,
+        // paddingLeft: 15,
+        // paddingRight: 15,
+        // borderRadius: 5
+      },
+    
 });
 
 export default Login;
